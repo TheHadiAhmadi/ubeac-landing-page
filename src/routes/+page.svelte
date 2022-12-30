@@ -27,17 +27,19 @@
   gap="4"
   h="100"
 >
-  <El my="5" display="flex" alignItems="center" justifyContent="center">
+  <El mb="3" display="flex" alignItems="center" justifyContent="center">
     <El
-      col="4"
+      col="5"
+      colSm="4"
       class="img img-ubeac"
       tag="img"
       borderRadius="circle"
       src="/ubeac_400x400.png"
     />
-    <El class="large-text" col="2=4">+</El>
+    <El class="plus" col="2" colSm="4">+</El>
     <El
-      col="4"
+      col="5"
+      colSm="4"
       class="img img-svelte"
       tag="img"
       borderRadius="circle"
@@ -46,8 +48,8 @@
   </El>
 
   <El fontSize="4">
-    <El class="large-text">uBeac's Svelte components</El>
-    <El mt="2" class="medium-text" textMuted>
+    <El tag="h1" class="large-text">uBeac Svelte components</El>
+    <El mt="3" tag="h3" class="medium-text" textMuted>
       Opinionated Svelte component UI library by uBeac
     </El>
   </El>
@@ -72,32 +74,16 @@
       Source Code
     </Button>
   </El>
-</El>
-
-<El
-  textAlign="center"
-  bgColor="secondary"
-  bgGradient
-  bgOpacity="25"
-  display="flex"
-  class="el-2 flex-column"
-  alignItems="center"
-  justifyContent="center"
-  p="5"
-  gap="3"
-  h="75"
->
-  <El class="medium-text">
-    To install uBeac Components in your existing Svelte project:
-  </El>
   <El
     class="text-terminal"
     border
     display="flex"
+    justifyContent="between"
     gap="3"
     shadow="lg"
     textColor="light"
     p="3"
+    mb="5"
     borderRoundSize="3"
     bgColor="github"
   >
@@ -106,29 +92,44 @@
       <Icon name={icon} />
     </El>
   </El>
-</El>
-
-<El bgOpacity="75" textColor="light" p="3" textAlign="center" bgColor="github">
-  &copy; {new Date().getFullYear()} ubeac.io
+  <El
+    position="absolute"
+    bottom="0"
+    left="0"
+    w="100"
+    bgOpacity="10"
+    textColor="dark"
+    p="3"
+    textAlign="center"
+    bgColor="github"
+  >
+    &copy; {new Date().getFullYear()} ubeac.io
+  </El>
 </El>
 
 <style>
   :global(.large-text) {
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 34px;
     font-size: 42px;
-    font-weight: 200;
+    font-weight: bold;
   }
 
   :global(.medium-text) {
+    margin-top: 16px;
     line-height: 24px;
     font-size: 22px;
     font-weight: 300;
   }
 
+  :global(.plus) {
+    font-size: 52px;
+    font-weight: bold;
+  }
+
   :global(.text-terminal) {
+    max-width: 410px;
     font-family: monospace;
-    text-shadow: 0 0 1px blue;
     font-size: 18px;
   }
 
