@@ -33,7 +33,6 @@
       colSm="4"
       class="img img-ubeac"
       tag="img"
-      borderRadius="circle"
       src="/ubeac_400x400.png"
     />
     <El class="plus" col="2" colSm="4">+</El>
@@ -42,7 +41,6 @@
       colSm="4"
       class="img img-svelte"
       tag="img"
-      borderRadius="circle"
       src="/svelte_1000x1000.png"
     />
   </El>
@@ -88,7 +86,7 @@
     bgColor="github"
   >
     <El>npm install @ubeac/svelte</El>
-    <El display="flex" on:click={copy}>
+    <El class="clipboard-icon" display="flex" on:click={copy}>
       <Icon name={icon} />
     </El>
   </El>
@@ -138,11 +136,16 @@
   }
 
   :global(.img-ubeac) {
-    filter: drop-shadow(0 0 3rem #376ccf);
+    filter: drop-shadow(0 0 3rem #376ccf90);
   }
   :global(.img-svelte) {
-    filter: drop-shadow(0 0 3rem #fe3c00);
+    scale: 0.7;
+    filter: drop-shadow(0 0 3rem #fe3c0060);
   }
+
+  :global(.clipboard-icon) {
+    cursor: pointer;
+}
 
   @media (max-width: 500px) {
     :global(.img) {
