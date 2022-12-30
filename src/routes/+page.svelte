@@ -138,10 +138,10 @@
   }
 
   :global(.img-ubeac) {
-    box-shadow: 0 0 5rem 5rem #376ccf40;
+    filter: drop-shadow(0 0 3rem #376ccf);
   }
   :global(.img-svelte) {
-    box-shadow: 0 0 5rem 5rem #fe3c0040;
+    filter: drop-shadow(0 0 3rem #fe3c00);
   }
 
   @media (max-width: 500px) {
