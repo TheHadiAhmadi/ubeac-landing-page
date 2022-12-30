@@ -20,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^1.0.0",
 		"@ubeac/svelte": "^0.0.6"
 	}
 }

@@ -23,9 +23,28 @@
   class="el-1 flex-column"
   alignItems="center"
   justifyContent="center"
+  p="3"
   gap="4"
-  h="75"
+  h="100"
 >
+  <El my="5" display="flex" alignItems="center" justifyContent="center">
+    <El
+      col="4"
+      class="img img-ubeac"
+      tag="img"
+      borderRadius="circle"
+      src="/ubeac_400x400.png"
+    />
+    <El class="large-text" col="2=4">+</El>
+    <El
+      col="4"
+      class="img img-svelte"
+      tag="img"
+      borderRadius="circle"
+      src="/svelte_1000x1000.png"
+    />
+  </El>
+
   <El fontSize="4">
     <El class="large-text">uBeac's Svelte components</El>
     <El mt="2" class="medium-text" textMuted>
@@ -33,7 +52,7 @@
     </El>
   </El>
 
-  <ButtonGroup size="lg" gap="3">
+  <El class="btn-list main-buttons" size="lg" gap="3">
     <Button
       px="4"
       href="https://svelte.ubeac.io/docs"
@@ -52,7 +71,7 @@
       <Icon size="xl" name="brand-github" />
       Source Code
     </Button>
-  </ButtonGroup>
+  </El>
 </El>
 
 <El
@@ -66,7 +85,7 @@
   justifyContent="center"
   p="5"
   gap="3"
-  h="50"
+  h="75"
 >
   <El class="medium-text">
     To install uBeac Components in your existing Svelte project:
@@ -111,5 +130,26 @@
     font-family: monospace;
     text-shadow: 0 0 1px blue;
     font-size: 18px;
+  }
+
+  :global(.img) {
+    width: 180px;
+  }
+
+  :global(.img-ubeac) {
+    box-shadow: 0 0 5rem 5rem #376ccf40;
+  }
+  :global(.img-svelte) {
+    box-shadow: 0 0 5rem 5rem #fe3c0040;
+  }
+
+  @media (max-width: 500px) {
+    :global(.img) {
+      width: 130px;
+    }
+
+    :global(.main-buttons) {
+      flex-direction: column;
+    }
   }
 </style>
