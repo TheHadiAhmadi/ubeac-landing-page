@@ -52,56 +52,52 @@
     </El>
   </El>
 
-  <El class="btn-list main-buttons" size="lg" gap="3">
-    <Button
-      px="4"
-      href="https://svelte.ubeac.io/docs"
-      size="lg"
-      color="primary"
-    >
-      Get Started
-    </Button>
-
-    <Button
-      px="4"
-      href="https://github.com/ubeac/svelte"
-      size="lg"
-      color="github"
-    >
-      <Icon size="xl" name="brand-github" />
-      Source Code
-    </Button>
-  </El>
-  <El
-    class="text-terminal"
-    border
-    display="flex"
-    justifyContent="between"
-    gap="3"
-    shadow="lg"
-    textColor="light"
-    p="3"
-    mb="5"
-    borderRoundSize="3"
-    bgColor="github"
-  >
-    <El>npm install @ubeac/svelte</El>
-    <El class="clipboard-icon" display="flex" on:click={copy}>
-      <Icon name={icon} />
+  <El class="container-400" row>
+    <El col="6">
+      <Button
+        col="12"
+        href="https://svelte.ubeac.io/docs"
+        size="lg"
+        color="primary"
+      >
+        <Icon size="xl" name="book" />
+        Get Started
+      </Button>
     </El>
-  </El>
-  <El
-    position="absolute"
-    bottom="0"
-    left="0"
-    w="100"
-    bgOpacity="10"
-    textColor="dark"
-    p="3"
-    textAlign="center"
-    bgColor="github"
-  >
-    &copy; {new Date().getFullYear()} ubeac.io
+
+    <El col="6">
+      <Button
+        col="12"
+        href="https://github.com/ubeac/svelte"
+        size="lg"
+        color="github"
+      >
+        <Icon size="xl" name="brand-github" />
+        Source Code
+      </Button>
+    </El>
+
+    <El col="12" mt="3" px="2">
+      <El
+        col="12"
+        class="text-terminal"
+        border
+        display="flex"
+        justifyContent="between"
+        gap="3"
+        shadow="lg"
+        textColor="light"
+        p="3"
+        mb="5"
+        borderRoundSize="3"
+        bgColor="github"
+      >
+        <El>npm install @ubeac/svelte</El>
+        <El class="clipboard-icon" display="flex" on:click={copy}>
+          <Icon name={icon} />
+        </El>
+      </El>
+    </El>
   </El>
 </El>
 
@@ -126,9 +122,12 @@
   }
 
   :global(.text-terminal) {
-    max-width: 410px;
     font-family: monospace;
     font-size: 18px;
+  }
+
+  :global(.container-400) {
+    width: 450px;
   }
 
   :global(.img) {
@@ -145,7 +144,7 @@
 
   :global(.clipboard-icon) {
     cursor: pointer;
-}
+  }
 
   @media (max-width: 500px) {
     :global(.img) {
